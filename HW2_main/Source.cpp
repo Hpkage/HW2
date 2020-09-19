@@ -12,13 +12,24 @@ using std::vector;
 using std::cin;
 using std::string;
 
+void InputNames(vector<string>& names) {
+	for (int n = 0; n < 10; n++) {
+		int i = n;
+		cin >> i;
+		cout << i << endl;
+	}
+	return;
+}
+
 int main(int argc, char** argv) {
 	vector<string> names;
 	for (int i = 0; i < 10; i++) {
 		string name;
-		cout << "Please enter a name : " << endl;
+		cout << "Please enter a name: " << endl;
 		getline(cin, name);
+		cout << endl;
 		names.push_back(name);
 	}
+	void InputNames(vector<string> & names);
 	return 0;
 }
