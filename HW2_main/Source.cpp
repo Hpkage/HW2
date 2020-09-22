@@ -14,7 +14,7 @@ using std::vector;
 using std::string;
 
 //parameter of the main function
-void InputNames(vector<string> & names) {
+void InputNames(vector<string>& names) {
 	for (int i = 0; i < 10; i++) {
 		string name;
 		cout << "Please enter a name: ";
@@ -25,13 +25,21 @@ void InputNames(vector<string> & names) {
 }
 
 //searches for the name you type to see if it exists
-bool DoesNameExist(const string & nameToFind, const vector<string> & names) {
-	if (bool nameToFind = true) {
-		return true;
+bool DoesNameExist(const string& nameToFind, const vector<string>& names) {
+	for (int i = 0; i < 10; i++) {
+		if (names[i] == nameToFind) {
+			return true;
+		}
 	}
-	else {
-		return false;
-	}
+	return 0;
+}
+
+//prints out all of the names you typed in
+void PrintNames(vector<string>& names) {
+	cout << endl;
+	string name;
+	cout << "These are all of the names you typed in:" << endl;
+	cout << name << endl;
 }
 
 //this program's main funtion
@@ -39,18 +47,22 @@ int main() {
 	//calls the InputNames function
 	vector<string> names;
 	InputNames(names);
+	cout << endl;
 
-	//calls the boolean function
-	int name;
+	//calls the DoesNameExist function
+	string nameToFind;
 	cout << "Enter a name you just typed to see if it exists: ";
-	cin >> name;
-	if (name) {
-		cout << "The name " << name << " exists.";
+	cin >> nameToFind;
+	if (DoesNameExist(nameToFind, names)) {
+		cout << "That name exists.";
 	}
 	else {
 		cout << "That name does not exist.";
 	}
 	cout << endl;
+
+	//calls the printNames function
+	PrintNames(names);
 
 	return 0;
 }
