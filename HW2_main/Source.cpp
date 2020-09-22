@@ -36,10 +36,11 @@ bool DoesNameExist(const string& nameToFind, const vector<string>& names) {
 
 //prints out all of the names you typed in
 void PrintNames(vector<string>& names) {
+	cout << endl;
+	cout << "These are all of the names you typed in:" << endl;
 	for (int i = 0; i < 10; i++) {
 		cout << endl;
-		cout << "These are all of the names you typed in:" << endl;
-		cout << i;
+		cout << names[i];
 		cout << endl;
 	}
 	return;
