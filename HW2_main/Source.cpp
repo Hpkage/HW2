@@ -40,9 +40,12 @@ void PrintNames(vector<string>& names) {
 	cout << "These are all of the names you typed in:" << endl;
 	for (int i = 0; i < 10; i++) {
 		cout << endl;
-		cout << names[i];
+		cout << i << ". " << names[i];
 		cout << endl;
 	}
+	cout << endl;
+	cout << "I made a list of all the names you put in." << endl;
+
 	return;
 }
 
